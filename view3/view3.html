@@ -1,0 +1,11 @@
+<form class="col-sm-6">
+
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" class="form-control" name="nome" id="nome" ng-model="vm.pessoa.nome">
+      <small id="nomrHelp" class="form-text text-muted"></small>
+    </div>
+ 
+
+    <button type="button" ng-click="vm.add(vm.pessoa)" class="btn btn-primary">Adicionar</button>
+  </form>

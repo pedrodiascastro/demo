@@ -1,0 +1,19 @@
+<div class="col-sm-6">
+  <div class="form-group">
+    <label for="search">Pesquisa:</label>
+    <input type="text" name="search" class="form-control" ng-model="vm.search" placeholder="">
+  </div>
+
+
+  <ul class="list-group">
+    <li class="list-group-item" ng-repeat="p in vm.lPessoas | filter:{nome: vm.search}"> {{p.nome}} <a href="" ng-click="vm.delete(p)"><i class="fas fa-trash fa-sm text-danger float-right"></i></a></li>
+  </ul>
+
+  <p><small class="text-primary">Total de registos:</small> {{vm.lPessoas.length}}</p>
+</div>
+
+<!--
+<p>
+  Data atual:
+  {{ vm.date | date: "yyyy/MM/dd"}}
+</p>-->
